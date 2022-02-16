@@ -12,7 +12,8 @@ const app = express();
 // Synchronize models with the database
 db.sequelize.sync();
 
-// Logging
+// Logging messages when new requests are received at the server
+// (used to monitor, debug and diagnose the service) 
 app.use(expressWinston.logger({
     transports: [
       new winston.transports.Console()
