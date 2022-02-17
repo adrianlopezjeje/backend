@@ -1,0 +1,57 @@
+version: '2'
+services:
+  web-server:
+    image: nginx
+    container_name: books-web-server
+    restart: always
+    expose:
+      - "80/tcp"
+    ports:
+      - "8080:80"
+    volumes:
+      - ./volumes/public:/usr/share/nginx/html:ro
+    environment:
+      - NGINX_PORT=80
+  db:
+    image: mysql:8.0.21
+    container_name: books-db-service
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_DATABASE=book-store
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user-password
+      - MYSQL_ROOT_PASSWORD=root-password
+    expose:
+      - "3306"
+      - "33060"
+    volumes:
+      - ./volumes/data:/var/lib/mysql
+    networks:
+      - books_backend
+
+  backend:
+    build: ./testing/
+    image: books-backend-service
+    container_name: books-backend-service
+    environment:
+      - PORT=3000
+      - DATABASE_NAME=book-store
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=user-password
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+      - WAIT_HOSTS=db:3306
+    ports:
+      - "3000:3000"
+    networks:
+      - books_backend
+    depends_on:
+      - db
+    volumes:
+      - ./volumes/uploads:/uploads
+      - ./volumes/public/covers:/covers
+
+networks:
+  books_backend:
+    driver: bridge
