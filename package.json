@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start":"node index.js",
-    "dev": "set NODE_ENV=development&&node -r dotenv/config index.js",
-    "test": "set NODE_ENV=test&&mocha -r dotenv/config test/index.js"
+    "test": "set NODE_ENV=test&&mocha test/index.js",
+    "dev-start": "set NODE_ENV=development&&node -r dotenv/config index.js",
+    "dev-test": "set NODE_ENV=test&&mocha -r dotenv/config test/index.js"
   },
   "keywords": [],
   "author": "",

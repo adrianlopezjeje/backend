@@ -7,7 +7,7 @@ services:
     expose:
       - "80/tcp"
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./volumes/public:/usr/share/nginx/html:ro
     environment:
@@ -31,7 +31,7 @@ services:
       - books_backend
 
   backend:
-    build: ./testing/
+    build: ./
     image: books-backend-service
     container_name: books-backend-service
     environment:

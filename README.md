@@ -21,5 +21,5 @@ The repository is organized in several directories:
     - `app/controllers`: contains the controllers for the API endpoints.
     - `app/models`: contains the data models.
 	- `app/media`: contains code to deal with media files.
-   
+
  - `/test`: contains the code of the tests.
