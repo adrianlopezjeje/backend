@@ -24,7 +24,7 @@ The repository is organized in several directories:
 
  - `/test`: contains the code of the tests.
 
- # Usage
+# Usage
 
 You must follow these steps to start the application in a local machine:
 
