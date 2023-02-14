@@ -19,7 +19,7 @@ The repository is organized in several directories:
     - `app/routes`: contains the API endpoints exposed by the server.
     - `app/middlewares/validators`: contains the validators for the API endpoints.
     - `app/controllers`: contains the controllers for the API endpoints.
-    - `app/models`: contains the data models.
+    - `app/models`: contains the data models (book and user).
 	- `app/media`: contains code to deal with media files.
 
  - `/test`: contains the code of the tests.
