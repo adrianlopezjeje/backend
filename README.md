@@ -23,3 +23,18 @@ The repository is organized in several directories:
 	- `app/media`: contains code to deal with media files.
 
  - `/test`: contains the code of the tests.
+
+ # Usage
+
+You must follow these steps to start the application in a local machine:
+
+ 1. Install the dependencies:
+  
+    - `npm install`
+
+ 2. Run the application in the local machine with the desired configuration::
+ 
+    - `npm run dev-start` to run the server with the development database.
+    - `npm run dev-test` to run the tests with the development database.
+    - `npm start` to run the server with the local database (production mode).
+    - `npm test` to run the tests with the local database.
