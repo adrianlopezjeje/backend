@@ -32,7 +32,7 @@ You must follow these steps to start the application in a local machine:
   
     - `npm install`
 
- 2. Run the application in the local machine with the desired configuration::
+ 2. Run the application in the local machine with the desired configuration:
  
     - `npm run dev-start` to run the server with the development database.
     - `npm run dev-test` to run the tests with the development database.
