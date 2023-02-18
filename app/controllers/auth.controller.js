@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models').User;
 const config = require('../config/auth.config');
 
-
+// User registration
 module.exports.signup = async (req, res, next) => {
     try {
         // Create a user    
@@ -18,6 +18,7 @@ module.exports.signup = async (req, res, next) => {
     }
 };
 
+// User authentication
 module.exports.login = async (req, res, next) => {
     try {
         // No validation needed

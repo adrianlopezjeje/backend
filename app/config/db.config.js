@@ -1,3 +1,4 @@
+// Database configuration
 const host = process.env.DATABASE_HOST || 'localhost';
 const port = process.env.DATABASE_PORT || '3306';
 const user = process.env.DATABASE_USER || 'user';
