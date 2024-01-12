@@ -1,5 +1,5 @@
 const {body, validationResult, param} = require('express-validator');
-const jwt = require('express-jwt');
+const { expressjwt: jwt }  = require('express-jwt');
 const auth = require('../../config/auth.config');
 const path = require('path');
 
