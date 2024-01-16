@@ -1,6 +1,6 @@
-# Example REST API for the teamwork
+# Example of REST API for the teamwork
 
-This repository contains an Node/Express application implementing a very simple REST API for a book store. It is used to illustrate the following key technologies:
+This repository contains a Node/Express application implementing a very simple REST API for a book store. It is used to illustrate the following key technologies:
 
  - REST API.
  - Express and its middlewares.
