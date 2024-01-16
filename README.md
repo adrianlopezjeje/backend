@@ -45,9 +45,9 @@ You must follow these steps to start the application in a local machine:
   
     - _npm install_
 
- 2. Run the application in the local machine with the desired configuration (described in the `package.json` file):
+ 2. Run the application in the local machine with the desired configuration of the database according to the scripts described in the `package.json` file:
  
-    - _npm run dev-start_ to run the server with the development database.
-    - _npm run dev-test_ to run the tests with the development database.
-    - _npm start_ to run the server with the local database (production mode).
-    - _npm test_ to run the tests with the local database.
+    - _npm run dev-start_: to run the server with the development database.
+    - _npm run dev-test_: to run the tests with the development database.
+    - _npm start_: to run the server with the local database (production mode).
+    - _npm test_: to run the tests with the local database.
