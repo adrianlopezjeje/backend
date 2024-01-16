@@ -1,7 +1,10 @@
-const Book = require('../../app/models').Book;
+// Test utils
+
+// Import modules
+const Book = require('../../app/models/db').Book;
 const bcrypt = require('bcrypt');
 const config = require('../../app/config/auth.config');
-const User = require('../../app/models').User;
+const User = require('../../app/models/db').User;
 const app = require('../../app/app');
 const chai = require('chai');
 const expect = require('chai').expect;

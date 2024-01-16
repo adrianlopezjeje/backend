@@ -1,4 +1,7 @@
-const Book = require('../models').Book;
+// Book controller
+
+// Import modules
+const Book = require('../models/db').Book;
 const path = require('path');
 const encoding = require('../media/encoding');
 const coverConfig = require('../config/cover.config');

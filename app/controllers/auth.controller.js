@@ -1,6 +1,9 @@
+// Authorization controller
+
+// Import modules
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../models').User;
+const User = require('../models/db').User;
 const config = require('../config/auth.config');
 
 // User registration

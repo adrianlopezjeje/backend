@@ -1,4 +1,5 @@
 // Book cover configuration
+
 const repo = '/covers/';
 
 module.exports = {

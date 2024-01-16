@@ -1,9 +1,13 @@
+// Book validator
+
+// Import modules
 const {body, validationResult, param} = require('express-validator');
 const { expressjwt: jwt }  = require('express-jwt');
 const auth = require('../../config/auth.config');
 const path = require('path');
 
-exports.create = [
+// Book data validation
+module.exports.create = [
   jwt({ secret: auth.secret, algorithms: [ auth.algorithm ] }),
   body('title')
     .trim()
@@ -30,6 +34,7 @@ exports.create = [
   },
 ];
 
+// Data validation for book cover upload 
 module.exports.upload = [
   jwt({ secret: auth.secret, algorithms: [ auth.algorithm ] }),
   param('id', 'missing book id')

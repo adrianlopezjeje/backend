@@ -1,5 +1,9 @@
+// Book model
+
+// Import modules
 const coverConfig = require('../config/cover.config');
 
+// Book object properties
 module.exports = (sequelize, Sequelize) => {
     const Book = sequelize.define("books", {  // Table name and fields
         id: {

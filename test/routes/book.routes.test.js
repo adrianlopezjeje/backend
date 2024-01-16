@@ -1,3 +1,6 @@
+// Test for book routes
+
+// Import modules
 const app = require('../../app/app');
 const chai = require('chai');
 const expect = require('chai').expect;

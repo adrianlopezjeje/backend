@@ -1,4 +1,5 @@
-FROM node:12
+# Node.js version
+FROM node:14
 
 # Install packages
 RUN apt-get update -q \

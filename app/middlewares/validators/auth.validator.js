@@ -1,5 +1,9 @@
+// Authorization validator
+
+// Import modules
 const {body, validationResult} = require('express-validator');
 
+// Signup data validation
 exports.validateUser = [
   body('username')
     .trim()
@@ -29,6 +33,7 @@ exports.validateUser = [
   },
 ];
 
+// Login data validation
 exports.validateLogin = [
   body('username')
     .trim()

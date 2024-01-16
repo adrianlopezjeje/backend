@@ -1,3 +1,6 @@
+// User model
+
+// User object properties
 module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define("user", {
         id: {

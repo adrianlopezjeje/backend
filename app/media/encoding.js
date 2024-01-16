@@ -1,7 +1,10 @@
+// Enconding functions
+
+// Import modules
 const child_process = require('child_process');
 
 // Encode a input book cover file to a output destination
-exports.normalize = (imageFileName, outputFileName) => {
+module.exports.normalize = (imageFileName, outputFileName) => {
   return new Promise((resolve, reject) => {
     const command = `ffmpeg -y -i ${imageFileName} ${outputFileName}`;
 
