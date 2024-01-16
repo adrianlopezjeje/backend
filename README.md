@@ -13,6 +13,8 @@ This repository contains a Node/Express application implementing a very simple R
 
 The repository is organized in several directories:
 
+ - `.vscode/launch.json`: used to configure the debugger in Visual Studio Code.
+
  - `/app`: contains the code of the express application.
  
     - `app/config`: contains the configuration files.
