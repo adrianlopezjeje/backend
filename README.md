@@ -13,9 +13,9 @@ This repository contains a Node/Express application implementing a very simple R
 
 The repository is organized in several directories:
 
- - `.vscode/launch.json`: used to configure the debugger in Visual Studio Code.
+ - `.vscode/launch.json`: contains configurations of the debugger in Visual Studio Code.
 
- - `/app`: contains the code of the express application.
+ - `/app`: contains the code of the Express application.
  
     - `app/config`: contains the configuration files.
     - `app/routes`: contains the routes (API endpoints) for authorization and book management.
@@ -25,12 +25,12 @@ The repository is organized in several directories:
     - `app/media`: contains the code to deal with media files.
     - `app.js`: main file of the express application.
 
- - `/test`: contains the code of the test application.
-    - `test/assets`: contains assets for test.
+ - `/test`: contains the code to test the application.
+    - `test/assets`: contains assets for the test.
     - `test/routes`: contains the code to test the routes.
-    - `index.js`: main file of the test application.
+    - `index.js`: main file of the test.
    
- - `index.js`: main file of the node.js application.
+ - `index.js`: main file of the Node.js application.
  - `.gitignore`: specifies intentionally untracked files that Git should ignore.
  - `Dockerfile`: contains all commands to build docker images.
  - `docker-compose.yml`: configures docker application’s services, networks, volumes and more.
