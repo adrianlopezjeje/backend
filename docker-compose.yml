@@ -35,6 +35,7 @@ services:
     build: ./
     image: books-backend-service
     container_name: books-backend-service
+    restart: always
     environment:
       - PORT=3000
       - DATABASE_NAME=book-store
