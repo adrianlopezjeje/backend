@@ -4,20 +4,20 @@ services:
     image: nginx
     container_name: books-web-server
     restart: always
-    expose:
-      - "80/tcp"
-    ports:
-      - "8081:80"
-    volumes:
-      - ./volumes/public:/usr/share/nginx/html:ro
-    environment:
+    environment: # container variables
       - NGINX_PORT=80
+    expose: # ports exposed by the container
+      - "80/tcp"
+    ports:  # container ports (right) redirected to host ports (left)
+      - "8081:80"
+    volumes: # container directories (right) mapped to host directories (left)
+      - ./volumes/public:/usr/share/nginx/html:ro
 
   db: # database service
     image: mysql:8.0.21
     container_name: books-db-service
     restart: always
-    command: --default-authentication-plugin=mysql_native_password
+    command: --default-authentication-plugin=mysql_native_password # option for clients to connect to MySQL using password 
     environment:
       - MYSQL_DATABASE=book-store
       - MYSQL_USER=user
@@ -28,13 +28,13 @@ services:
       - "33060"
     volumes:
       - ./volumes/data:/var/lib/mysql
-    networks:
-      - books_backend
+    networks:  
+      - books_backend # network to communicate with books-rest-api-service container
 
-  backend:  # REST API service
-    build: ./
-    image: books-backend-service
-    container_name: books-backend-service
+  rest-api: # REST API service
+    build: ./ # image is built from the configuration in ./Dockerfile (located in the current directory)
+    image: books-rest-api-service
+    container_name: books-rest-api-service
     restart: always
     environment:
       - PORT=3000
@@ -46,14 +46,14 @@ services:
       - WAIT_HOSTS=db:3306
     ports:
       - "3000:3000"
-    networks:
-      - books_backend
-    depends_on:
-      - db  # the REST API service waits for the database service
     volumes:
       - ./volumes/uploads:/uploads
       - ./volumes/public/covers:/covers
+    networks: 
+      - books_backend # network to communicate with books-db-service container
+    depends_on:
+      - db  # REST API service waits for database service
 
 networks: 
-  books_backend: # Each container joins this network and is reachable by the others.
+  books_backend: # network to communicate books-rest-api-service and books-db-service containers
     driver: bridge
