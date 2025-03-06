@@ -10,7 +10,7 @@ services:
     ports:  # redirects to host ports (left) container ports (right)
       - "8081:80"
     volumes: # maps to host directories (left) container directories (right)
-      - ./volumes/public:/usr/share/nginx/html:ro	
+      - ./volumes/public:/usr/share/nginx/html:ro
 
   db: # database service
     image: mysql:8.0.21
